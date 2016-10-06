@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#311B92"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp">
+
+        <TableRow
+            >
+
+            <TextView
+                style="@style/TextViewDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: " />
+            <TextView
+                android:id="@+id/addressTextView"
+                style="@style/TableRowTextViewDesign"
+                android:text="No Data ..." />
+
+        </TableRow>
+
+        <TableRow
+            android:padding="2dp">
+
+            <TextView
+                style="@style/TextViewDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude: " />
+            <TextView
+                android:id="@+id/latitudeTextView"
+                style="@style/TableRowTextViewDesign"
+                android:text="No Data ..." />
+
+        </TableRow>
+
+        <TableRow
+            android:padding="2dp">
+
+            <TextView
+                style="@style/TextViewDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitude: " />
+            <TextView
+                android:id="@+id/longitudeTextView"
+                style="@style/TableRowTextViewDesign"
+                android:text="No Data ..." />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_margin="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/lockImageview"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
