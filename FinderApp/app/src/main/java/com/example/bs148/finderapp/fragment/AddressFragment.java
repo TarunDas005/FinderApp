@@ -76,7 +76,7 @@ public class AddressFragment extends BaseFragment {
     ImageView imageView;
     MapView mMapView;
     private GoogleMap googleMap;
-    TextView addressTextView, latitudeTextView, longitudeTextView;
+    TextView addressTextView, latitudeTextView, longitudeTextView,toolbarHeaderTextView;
 
     boolean lockStatus = false;
 
@@ -107,6 +107,9 @@ public class AddressFragment extends BaseFragment {
         latitudeTextView = (TextView) rootView.findViewById(R.id.latitudeTextView);
         longitudeTextView = (TextView) rootView.findViewById(R.id.longitudeTextView);
         imageView = (ImageView) rootView.findViewById(R.id.lockImageview);
+        toolbarHeaderTextView= (TextView) rootView.findViewById(R.id.tv_toolbar_header);
+
+        toolbarHeaderTextView.setText("Address");
 
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
 

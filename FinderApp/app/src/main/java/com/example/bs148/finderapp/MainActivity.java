@@ -136,4 +136,9 @@ public class MainActivity extends BaseActivity
         transaction.commit();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setTitle("");
+    }
 }
