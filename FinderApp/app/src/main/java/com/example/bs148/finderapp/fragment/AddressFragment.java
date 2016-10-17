@@ -51,6 +51,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Locale;
 
@@ -151,13 +152,14 @@ public class AddressFragment extends BaseFragment {
     }
 
     private void setLatitudeAndLongitude() {
+        DecimalFormat df=new DecimalFormat("#.#######");
         if (LatLngValue.lattitde != 0) {
-            latitudeTextView.setText(LatLngValue.lattitde + "");
+            latitudeTextView.setText(df.format(LatLngValue.lattitde) + "");
         } else {
             latitudeTextView.setText("No Data Found");
         }
         if (LatLngValue.longitude != 0) {
-            longitudeTextView.setText(LatLngValue.longitude + "");
+            longitudeTextView.setText(df.format(LatLngValue.longitude) + "");
         } else {
             longitudeTextView.setText("No Data Found");
         }
@@ -416,7 +418,7 @@ public class AddressFragment extends BaseFragment {
         if(requestCode==PLACE_PICKER_REQUEST){
             if(resultCode==RESULT_OK){
                 Place place=PlacePicker.getPlace(getContext(),data);
-                String address=String.format("Place: %s",place.getAddress());
+                String address=String.format("%s",place.getAddress());
                 String placeName= (String) place.getName();
                 LatLng latLng=place.getLatLng();
 
