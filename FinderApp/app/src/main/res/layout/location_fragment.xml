@@ -73,7 +73,7 @@
 
         <ImageView
             android:layout_margin="20dp"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_width="50dp"
             android:layout_height="50dp"

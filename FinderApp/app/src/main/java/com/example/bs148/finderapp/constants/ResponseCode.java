@@ -6,4 +6,5 @@ package com.example.bs148.finderapp.constants;
 
 public class ResponseCode {
     public static final String RESPONSE_SUCCESSFULL="OK";
+    public static final int PLACE_PICKER_REQUEST=1;
 }
